@@ -13,7 +13,7 @@ public class MainController {
     //@RequestMapping(value = "/", method = RequestMethod.GET)
     @GetMapping("/")
     public String main() {
-        return "main";
+        return "enterprise/enterpriseMain";
     }
 
 
