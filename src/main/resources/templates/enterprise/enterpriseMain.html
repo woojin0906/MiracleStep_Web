@@ -4,10 +4,22 @@
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/layout1}">
+<!-- 사용자 CSS 추가 -->
+<th:block layout:fragment="css">
+  <style>
+    .main_img {
+      width:550px;
+      height:550px;
+      float:right;
+      margin:10px;
+    }
+
+  </style>
+</th:block>
 
 <div layout:fragment="content">
-  <h1>Miracle Step</h1>
-  <h3></h3>
+  <img class="main_img" src="/img/enterpriseMain.png" style="">
+
 </div>
 
 </html>
