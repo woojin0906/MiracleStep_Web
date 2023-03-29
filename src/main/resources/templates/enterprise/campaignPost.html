@@ -53,52 +53,21 @@
       border: 1px solid #000000;
       border-radius: 5px;
     }
-    .campaing_post_name {
-      text-align: center;
-      font-size: x-large;
-      font-weight: bold;
-    }
-    .step {
-      text-align: center;
-      margin: 10px 0px;
-      color: darkgray;
-    }
-    .step_content {
-      margin: 10px 0px 70px 450px;
-      font-weight: bold;
-    }
-    .step_num {
-      color: #55575a;
-      font-weight: bold;
-      font-size: 12px;
-    }
-    .step_content_item {
-      margin-left: 3px;
-    }
+
   </style>
 </th:block>
 <div layout:fragment="content">
   <div id="main_footer">
     <main>
       <div class="main">
-
-        <div class="campaing_post_name">
-          캠페인 등록
-        </div>
-        <div class="step">
-          <span class="step_num">STEP 01</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="step_num">STEP 02</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="step_num">STEP 03</span>
-        </div>
-        <div class="step_content">
-          캠페인 접수&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="step_content_item">애플리케이션 전달</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;등록
-        </div>
         <div class="main_name">
-          문의 작성
+          문의
         </div>
         <form id="form_1" action="" method="post" >
           <table>
             <tr>
               <th>제목</th>
-              <td><input id="_title" type="text" name="_title" size="120" maxlength="100" value="" placeholder="제목 입력"/></td>
+              <td>유기견보호센터 캠페인<input type="hidden" name="_title" size="120" maxlength="100" value=""/></td> <!-- 여기에는 제목을 받아올 예정 -->
             </tr>
             <tr>
               <th>단체명</th>
@@ -113,28 +82,22 @@
             </tr>
             <tr>
               <th>시작기간</th>
-              <td>
-                <input id="_startDate" type="text" name="_startDate" size="120" maxlength="100" value="" placeholder="캠페인 시작 일자"/>
-              </td>
+              <td>2023.03.03<input type="hidden" name="_startDate" size="120" maxlength="100" value=""/></td> <!-- 여기에는 시작 일자를 받아올 예정 -->
             </tr>
             <tr>
               <th>종료기간</th>
-              <td>
-                <input id="_lastDate" type="text" name="_lastDate" size="120" maxlength="100" value="" placeholder="캠페인 종료 일자"/>
-              </td>
+              <td>2023.03.29<input type="hidden" name="_lastDate" size="120" maxlength="100" value=""/></td> <!-- 여기에는 종료 일자를 받아올 예정 -->
             </tr>
             <tr>
               <th>목표 걸음수</th>
-              <td>
-                <input id="_step" type="text" name="_step" size="120" maxlength="100" value="" placeholder="목표 걸음수"/>
-              </td>
+              <td>1,000,000<input type="hidden" name="_step" size="120" maxlength="100" value=""/></td> <!-- 여기에는 목표 걸음수를 받아올 예정 -->
             </tr>
             <tr>
               <th>내용</th>
-              <td><textarea id="_context" name="_context" cols="122" rows="10"></textarea></td>
+              <td><textarea id="_context" name="_context" cols="122" rows="10"></textarea></td> <!-- 여기에는 내용을 받아올 예정 -->
             </tr>
             <tr>
-              <td colspan="2"><input id="btn" type="button" value="작성완료"></td>
+              <td colspan="2"><input id="btn" type="button" value="수정하기"></td>
             </tr>
           </table>
         </form>

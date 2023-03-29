@@ -81,18 +81,8 @@
   <div id="main_footer">
     <main>
       <div class="main">
-
-        <div class="campaing_post_name">
-          캠페인 등록
-        </div>
-        <div class="step">
-          <span class="step_num">STEP 01</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="step_num">STEP 02</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="step_num">STEP 03</span>
-        </div>
-        <div class="step_content">
-          캠페인 접수&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="step_content_item">애플리케이션 전달</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;등록
-        </div>
         <div class="main_name">
-          문의 작성
+          게시글 수정
         </div>
         <form id="form_1" action="" method="post" >
           <table>
@@ -105,36 +95,15 @@
               <td>MiracleStep<input type="hidden" name="_nickname" value="<%=nick%>"></td> <!-- 여기에는 단체명을 받아올 예정 -->
             </tr>
             <tr>
-              <th>주제</th>
-              <td><input class="_category" type="radio" name="_category" value="person"/>사람
-                <input class="_category" type="radio" name="_category" value="environment"/>환경
-                <input class="_category" type="radio" name="_category" value="animal"/>동물
-              </td>
-            </tr>
-            <tr>
-              <th>시작기간</th>
-              <td>
-                <input id="_startDate" type="text" name="_startDate" size="120" maxlength="100" value="" placeholder="캠페인 시작 일자"/>
-              </td>
-            </tr>
-            <tr>
-              <th>종료기간</th>
-              <td>
-                <input id="_lastDate" type="text" name="_lastDate" size="120" maxlength="100" value="" placeholder="캠페인 종료 일자"/>
-              </td>
-            </tr>
-            <tr>
-              <th>목표 걸음수</th>
-              <td>
-                <input id="_step" type="text" name="_step" size="120" maxlength="100" value="" placeholder="목표 걸음수"/>
-              </td>
+              <th>등록일</th>
+              <td>2023.03.29<input type="hidden" name="_date" size="120" maxlength="100" value="" placeholder="등록일"/></td> <!-- 현재 날짜 받아올 예정 -->
             </tr>
             <tr>
               <th>내용</th>
               <td><textarea id="_context" name="_context" cols="122" rows="10"></textarea></td>
             </tr>
             <tr>
-              <td colspan="2"><input id="btn" type="button" value="작성완료"></td>
+              <td colspan="2"><input id="btn" type="button" value="수정완료"></td>
             </tr>
           </table>
         </form>
