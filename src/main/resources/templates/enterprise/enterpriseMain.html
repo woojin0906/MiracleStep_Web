@@ -7,19 +7,65 @@
 <!-- 사용자 CSS 추가 -->
 <th:block layout:fragment="css">
   <style>
+    .content {
+      margin-bottom: 100px;
+      margin-top: 10px;
+      margin-left: 200px;
+      margin-right: 20px;
+    }
     .main_img {
-      width:550px;
-      height:550px;
+      width:600px;
+      height:600px;
       float:right;
       margin:10px;
     }
-
+    label.main_title {
+      font-size: xxx-large;
+      margin-top: 200px;
+      font-weight: bold;
+    }
+    button.btn_board {
+      margin-top: 30px;
+      margin-right: 20px;
+      background: #183867;
+      border-color: #ffffff;
+      border-radius: 10px;
+      padding: 10px;
+      width: 150px;
+      font-size: 15px;
+      color: #ffffff;
+      font-weight: bold;
+    }
+    button.btn_campaign {
+      margin-top: 30px;
+      margin-right: 20px;
+      background: #ffffff;
+      border-color: #ffffff;
+      border-radius: 10px;
+      padding: 10px;
+      width: 200px;
+      font-size: 15px;
+      color: #183867;
+      font-weight: bold;
+    }
+    .main_content {
+      margin-left: 50px;
+    }
+    .main_contents {
+      margin-top: 5px;
+      font-size: 18px;
+    }
   </style>
 </th:block>
 
 <div layout:fragment="content">
-  <img class="main_img" src="/img/enterpriseMain.png" style="">
-
+  <img class="main_img" src="/img/enterpriseMain.png">
+  <div class="main_content">
+    <label class="main_title">Turn your step into a value</label><p>
+    <label class="main_contents">Give the meaning of donation, every step of your life is worthwhile</label><p>
+    <button type="submit" class="btn_board">게시판</button>
+    <button type="submit" class="btn_campaign">캠페인 신청(기업용)</button>
+  </div>
 </div>
 
 </html>
