@@ -15,6 +15,9 @@
     <style>
         .content {
             margin-top: 100px;
+            margin-bottom:100px;
+            margin-left: 200px;
+            margin-right: 200px;
         }
         * {
             margin: 0;
@@ -36,31 +39,31 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-        .main_form > form {
+        #_LoginData {
             width: 100%;
             height: 80%;
             padding: 20px;
         }
-        .main_form > form > .grow_input {
+        .grow_input {
             width: 100%;
             height: 80px;
             margin-bottom: 10px;
             text-align: center;
         }
-        .main_form > form > .grow_input > label {
+        .login_label {
             display: block;
             font-size: 18px;
             margin-left: 90px;
             text-align: left;
         }
-        .main_form > form > .grow_input > input {
+        #id, #pw {
             width: 60%;
             height: 50%;
             margin: 10px 20px;
             box-shadow: 1px 1px 1px 1px gray;
             border-radius: 10px
         }
-        .main_form > form > .btn {
+        #btn {
             width: 70%;
             height: 50px;
             border: none;
@@ -71,10 +74,6 @@
             border-radius: 12px;
             margin: 30px auto;
             display: block;
-        }
-        .main_form > .sub_btn_box > button {
-            width: 140px;
-            height: 50px;
         }
         .main_form > .sub_btn_box > button:nth-of-type(1) {
             margin-right: 10px;
@@ -90,17 +89,17 @@
             margin: auto;
             padding-bottom: 15px;
         }
-        .list {
+        .login_list {
             display: flex;
             justify-content: center;
         }
-        li {
+        .login_li {
             float: left;
             margin-left: 15px;
             display: inline;
             font-size: 17px;
         }
-        ul {
+        .login_ul {
             text-align: center;
             list-style:none;
             margin: 20px auto;
@@ -117,24 +116,24 @@
 <div layout:fragment="content">
     <div class="login_title">로그인</div>
     <div class="main_form">
-        <form id="_LoginData" action="LoginCheck.jsp" method="post">
+        <form id="_LoginData" action="" method="post">
             <div class="grow_input">
-                <label>아이디<br></label>
+                <label class="login_label">아이디<br></label>
                 <input type="text" name="id" id="id" />
             </div>
             <div class="grow_input">
-                <label>비밀번호<br></label>
+                <label class="login_label">비밀번호<br></label>
                 <input type="password" name="pw" id="pw" />
                 <input type="hidden" name="_RSAID" id="_RSAID" value="123">
                 <input type="hidden" name="_RSAPW" id="_RSAPW" value="456">
             </div>
             <button id="btn" class="btn" type="button">로그인</button>
         </form>
-        <div class="list">
-            <ul>
-                <li onclick="location.href='join.jsp'">회원가입</a></li>
-                <li style="color:lightgray;">|</li>
-                <li onclick="location.href='SearchUser.jsp'">비밀번호 찾기</a></li>
+        <div class="login_list">
+            <ul class="login_ul">
+                <li class="login_li" onclick="location.href='join.jsp'">회원가입</a></li>
+                <li class="login_li" style="color:lightgray;">|</li>
+                <li class="login_li" onclick="location.href='SearchUser.jsp'">비밀번호 찾기</a></li>
             </ul>
         </div>
 
