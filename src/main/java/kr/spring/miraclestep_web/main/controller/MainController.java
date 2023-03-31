@@ -11,9 +11,65 @@ public class MainController {
 
     //	옛날방식
     //@RequestMapping(value = "/", method = RequestMethod.GET)
+
     @GetMapping("/")
-    public String main() {
+    public String main1() {
         return "mypage/mypage";
+    }
+
+    @GetMapping("/boardList")
+    public String main2() {
+        return "board/boardList";
+    }
+
+    @GetMapping("/boardPost")
+    public String main3() {
+        return "board/boardPost";
+    }
+
+    @GetMapping("/boardWritingPost")
+    public String main4() {
+        return "board/boardWritingPost";
+    }
+
+    @GetMapping("/campaignList")
+    public String main5() {
+        return "enterprise/campaignList";
+    }
+
+    @GetMapping("/campaignPost")
+    public String main6() {
+        return "enterprise/campaignPost";
+    }
+
+    @GetMapping("/enterpriseMain")
+    public String main7() {
+        return "enterprise/enterpriseMain";
+    }
+
+    @GetMapping("/writingPost")
+    public String main8() {
+        return "enterprise/writingPost";
+    }
+
+    @GetMapping("/mypageCampaign")
+    public String main9() {
+        return "mypage/mypageCampaign";
+    }
+
+    @GetMapping("/mypageUpdateMember")
+    public String main10() {
+        return "mypage/mypageUpdateMember";
+    }
+
+    @GetMapping("/login")
+    public String main11() {
+        return "member/login";
+    }
+
+    @GetMapping("/join")
+    public String main12() {
+        return "member/join";
     }
 
 
