@@ -11,12 +11,12 @@
     <title>MiracleStep Admin Page</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="min.css" rel="stylesheet">
+    <link href="css/min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="dashboard.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
 
-    <script src="ie-emulation-modes-warning.js"></script>
+    <script src="js/ie-emulation-modes-warning.js"></script>
   </head>
 
   <body>
@@ -55,35 +55,25 @@
 
           <ul class="nav nav-sidebar">
             <li><p style="margin-left: 17pt;"><b>Campaign</b></p></li>
-            <li><a href="searchCampaign.html">Search Campaign</a></li>
-            <li class="active"><a href="removeCampaign.html">Remove Campaign <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="searchCampaign.html">Search Campaign <span class="sr-only">(current)</span></a></li>
+            <li><a href="removeCampaign.html">Remove Campaign</a></li>
           </ul>
-
-          <!-- 캠페인 제거 체크 이벤트 -->
-          <script>
-            function remove_check(campaignId){
-              if (confirm("'"+campaignId+"캠페인 정보를 삭제하시겠습니까?") == true){    //확인
-                var form = document.removeCampaign;
-                form.submit();
-                        
-              }else{   //취소
-                return;
-              }
-            }
-          </script>
 
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <br>
-          <h2 class="sub-header">Campaign Remove</h2>
-          <!-- Campaign 삭제 -->
-          <form name="removeCampaign" action="#" method="#">
-            ID : &nbsp;
-            <input type="text" id="campaign_remove" name="campaign_remove" placeholder="campaign01" style="height: 21pt;">
-            <input type="button" value="Remove" style="height: 21pt;" 
-            onclick="remove_check(document.getElementById('campaign_remove').value)">
+          <h2 class="sub-header">Campaign Search</h2>
+
+          <!-- Campaign검색 -->
+          <form action="#" method="#">
+            <select style="height: 21pt;">
+              <option value="search_id">ID</option>
+              <option value="search_name">NAME</option>
+            </select>
+            <input type="text" name="user_search" placeholder="campaign01" style="height: 21pt;">
+            <input type="submit" value="search">
           </form>
-          <hr>
+
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -122,10 +112,10 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="min.js"></script>
+    <script src="js/min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="holder.js"></script>
+    <script src="js/holder.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="ie10-viewport-bug-workaround.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>

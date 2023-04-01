@@ -11,12 +11,12 @@
     <title>MiracleStep Admin Page</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="min.css" rel="stylesheet">
+    <link href="css/min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="dashboard.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
 
-    <script src="ie-emulation-modes-warning.js"></script>
+    <script src="js/ie-emulation-modes-warning.js"></script>
   </head>
 
   <body>
@@ -46,59 +46,67 @@
             <li><p style="margin-left: 17pt;">Main</p></li>
             <li><a href="main.html">Home</a></li>
             <hr>
-            <li><p style="margin-left: 17pt;">User</p></li>
-            <li><a href="searchUser.html">Search Users</a></li>
-            <li><a href="addingUser.html">Adding Users</a></li>
+            <li><p style="margin-left: 17pt;"><b>User</b></p></li>
+            <li class="active"><a href="searchUser.html">Search Users <span class="sr-only">(current)</span></a></li>
+            <li><a href="addingUser.html">Add Users</a></li>
             <li><a href="removingUser.html">Remove Users</a></li>
             <li><a href="modifyingUser.html">Modify Users</a></li>
           </ul><hr>
 
           <ul class="nav nav-sidebar">
-            <li><p style="margin-left: 17pt;"><b>Campaign</b></p></li>
-            <li class="active"><a href="searchCampaign.html">Search Campaign <span class="sr-only">(current)</span></a></li>
+            <li><p style="margin-left: 17pt;">Campaign</p></li>
+            <li><a href="searchCampaign.html">Search Campaign</a></li>
             <li><a href="removeCampaign.html">Remove Campaign</a></li>
           </ul>
 
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <br>
-          <h2 class="sub-header">Campaign Search</h2>
+          <h2 class="sub-header">User Search</h2>
 
-          <!-- Campaign검색 -->
+          <!-- User검색 -->
           <form action="#" method="#">
             <select style="height: 21pt;">
               <option value="search_id">ID</option>
               <option value="search_name">NAME</option>
             </select>
-            <input type="text" name="user_search" placeholder="campaign01" style="height: 21pt;">
+            <input type="text" name="user_search" placeholder="inbeom" style="height: 21pt;">
             <input type="submit" value="search">
           </form>
-
+          <hr>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>No.</th>
                   <th>Id</th>
                   <th>Name</th>
                   <th>Tel</th>
-                  <th>AvaliableStep</th>
+                  <th>Birth</th>
+                  <th>Height</th>
+                  <th>Weight</th>
+                  <th>AStep</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>01</td>
                   <td>test1234@naver.com</td>
                   <td>card</td>
                   <td>010-6542-9844</td>
+                  <td>2023-03-15</td>
+                  <td>163</td>
+                  <td>90</td>
                   <td>1560</td>
                 </tr>
                 <tr>
-                  <td>02</td>
-                  <td>asdf@gmail.com</td>
-                  <td>inbeom</td>
-                  <td>010-1234-5678</td>
-                  <td>84658</td>
+                  <tr>
+                    <td>asdf1@naver.com</td>
+                    <td>inbeom</td>
+                    <td>010-5645-6465</td>
+                    <td>2005-07-19</td>
+                    <td>192</td>
+                    <td>68</td>
+                    <td>35685</td>
+                  </tr>
                 </tr>
         
               </tbody>
@@ -112,10 +120,10 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="min.js"></script>
+    <script src="js/min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="holder.js"></script>
+    <script src="js/holder.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="ie10-viewport-bug-workaround.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
