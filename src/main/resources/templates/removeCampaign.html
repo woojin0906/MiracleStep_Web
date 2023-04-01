@@ -43,83 +43,72 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             
-            <li><p style="margin-left: 17pt;"><b>Main</b></p></li>
-            <li class="active"><a href="main.html">Home <span class="sr-only">(current)</span></a></li>
+            <li><p style="margin-left: 17pt;">Main</p></li>
+            <li><a href="main.html">Home</a></li>
             <hr>
             <li><p style="margin-left: 17pt;">User</p></li>
             <li><a href="searchUser.html">Search Users</a></li>
-            <li><a href="addingUser.html">Add Users</a></li>
+            <li><a href="addingUser.html">Adding Users</a></li>
             <li><a href="removingUser.html">Remove Users</a></li>
             <li><a href="modifyingUser.html">Modify Users</a></li>
           </ul><hr>
 
           <ul class="nav nav-sidebar">
-            <li><p style="margin-left: 17pt;">Campaign</p></li>
+            <li><p style="margin-left: 17pt;"><b>Campaign</b></p></li>
             <li><a href="searchCampaign.html">Search Campaign</a></li>
-            <li><a href="removeCampaign.html">Remove Campaign</a></li>
+            <li class="active"><a href="removeCampaign.html">Remove Campaign <span class="sr-only">(current)</span></a></li>
           </ul>
+
+          <!-- 캠페인 제거 체크 이벤트 -->
+          <script>
+            function remove_check(campaignId){
+              if (confirm("'"+campaignId+"캠페인 정보를 삭제하시겠습니까?") == true){    //확인
+                var form = document.removeCampaign;
+                form.submit();
+                        
+              }else{   //취소
+                return;
+              }
+            }
+          </script>
 
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Overview</h1>
-
-          <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="img/user_c.png" height="150" width="150">
-              <h4>24829명</h4>
-              <span class="text-muted">총 이용자 수</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="img/user_b.png" height="150" width="150">
-              <h4>824명</h4>
-              <span class="text-muted">오늘의 접속자 수</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="img/giving_c.png" height="150" width="150">
-              <h4>52개</h4>
-              <span class="text-muted">등록된 캠페인</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="img/giving_b.png" height="150" width="150">
-              <h4>103개</h4>
-              <span class="text-muted">완료된 캠페인</span>
-            </div>
-          </div>
           <br>
-          <h2 class="sub-header">User Status</h2>
+          <h2 class="sub-header">Campaign Remove</h2>
+          <!-- Campaign 삭제 -->
+          <form name="removeCampaign" action="#" method="#">
+            ID : &nbsp;
+            <input type="text" id="campaign_remove" name="campaign_remove" placeholder="campaign01" style="height: 21pt;">
+            <input type="button" value="Remove" style="height: 21pt;" 
+            onclick="remove_check(document.getElementById('campaign_remove').value)">
+          </form>
+          <hr>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
                 <tr>
+                  <th>No.</th>
                   <th>Id</th>
                   <th>Name</th>
                   <th>Tel</th>
-                  <th>Birth</th>
-                  <th>Height</th>
-                  <th>Weight</th>
-                  <th>AStep</th>
+                  <th>AvaliableStep</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
+                  <td>01</td>
                   <td>test1234@naver.com</td>
                   <td>card</td>
                   <td>010-6542-9844</td>
-                  <td>2023-03-15</td>
-                  <td>163</td>
-                  <td>90</td>
                   <td>1560</td>
                 </tr>
                 <tr>
-                  <tr>
-                    <td>asdf1@naver.com</td>
-                    <td>inbeom</td>
-                    <td>010-5645-6465</td>
-                    <td>2005-07-19</td>
-                    <td>192</td>
-                    <td>68</td>
-                    <td>35685</td>
-                  </tr>
+                  <td>02</td>
+                  <td>asdf@gmail.com</td>
+                  <td>inbeom</td>
+                  <td>010-1234-5678</td>
+                  <td>84658</td>
                 </tr>
         
               </tbody>
