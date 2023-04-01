@@ -14,6 +14,11 @@ public class MainController {
 
     @GetMapping("/")
     public String main1() {
+        return "main";
+    }
+
+    @GetMapping("/mypage")
+    public String main13() {
         return "mypage/mypage";
     }
 

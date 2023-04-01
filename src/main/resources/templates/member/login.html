@@ -116,7 +116,7 @@
 <div layout:fragment="content">
     <div class="login_title">로그인</div>
     <div class="main_form">
-        <form id="_LoginData" action="" method="post">
+        <form id="_LoginData" action="/" method="post">
             <div class="grow_input">
                 <label class="login_label">아이디<br></label>
                 <input type="text" name="id" id="id" />
@@ -131,9 +131,9 @@
         </form>
         <div class="login_list">
             <ul class="login_ul">
-                <li class="login_li" onclick="location.href='join.jsp'">회원가입</a></li>
+                <li class="login_li"><a href="/join">회원가입</a></li>
                 <li class="login_li" style="color:lightgray;">|</li>
-                <li class="login_li" onclick="location.href='SearchUser.jsp'">비밀번호 찾기</a></li>
+                <li class="login_li"><a href="/">비밀번호 찾기</a></li>
             </ul>
         </div>
 
