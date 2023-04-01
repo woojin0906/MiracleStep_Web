@@ -12,9 +12,15 @@ public class MainController {
     //	옛날방식
     //@RequestMapping(value = "/", method = RequestMethod.GET)
 
+
+    @GetMapping("/main")
+    public String main7() {
+        return "main";
+    }
+
     @GetMapping("/")
     public String main1() {
-        return "main";
+        return "enterprise/enterpriseMain";
     }
 
     @GetMapping("/mypage")
@@ -45,11 +51,6 @@ public class MainController {
     @GetMapping("/campaignPost")
     public String main6() {
         return "enterprise/campaignPost";
-    }
-
-    @GetMapping("/enterpriseMain")
-    public String main7() {
-        return "enterprise/enterpriseMain";
     }
 
     @GetMapping("/writingPost")
