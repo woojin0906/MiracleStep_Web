@@ -43,11 +43,11 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             
-            <li><p style="margin-left: 17pt;"><b>Main</b></p></li>
-            <li class="active"><a href="main.html">Home <span class="sr-only">(current)</span></a></li>
+            <li><p style="margin-left: 17pt;">Main</p></li>
+            <li><a href="main.html">Home</a></li>
             <hr>
-            <li><p style="margin-left: 17pt;">User</p></li>
-            <li><a href="searchUser.html">Search Users</a></li>
+            <li><p style="margin-left: 17pt;"><b>User</b></p></li>
+            <li class="active"><a href="searchUser.html">Search Users <span class="sr-only">(current)</span></a></li>
             <li><a href="addingUser.html">Add Users</a></li>
             <li><a href="removingUser.html">Remove Users</a></li>
             <li><a href="modifyingUser.html">Modify Users</a></li>
@@ -61,32 +61,19 @@
 
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Overview</h1>
-
-          <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="img/user_c.png" height="150" width="150">
-              <h4>24829명</h4>
-              <span class="text-muted">총 이용자 수</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="img/user_b.png" height="150" width="150">
-              <h4>824명</h4>
-              <span class="text-muted">오늘의 접속자 수</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="img/giving_c.png" height="150" width="150">
-              <h4>52개</h4>
-              <span class="text-muted">등록된 캠페인</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="img/giving_b.png" height="150" width="150">
-              <h4>103개</h4>
-              <span class="text-muted">완료된 캠페인</span>
-            </div>
-          </div>
           <br>
-          <h2 class="sub-header">User Status</h2>
+          <h2 class="sub-header">User Search</h2>
+
+          <!-- User검색 -->
+          <form action="#" method="#">
+            <select style="height: 21pt;">
+              <option value="search_id">ID</option>
+              <option value="search_name">NAME</option>
+            </select>
+            <input type="text" name="user_search" placeholder="inbeom" style="height: 21pt;">
+            <input type="submit" value="search">
+          </form>
+          <hr>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
