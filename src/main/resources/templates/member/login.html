@@ -14,8 +14,7 @@
 <th:block layout:fragment="css">
     <style>
         .content {
-            margin-top: 100px;
-            margin-bottom:100px;
+            margin-top: 130px;
             margin-left: 200px;
             margin-right: 200px;
         }
@@ -60,7 +59,6 @@
             width: 60%;
             height: 50%;
             margin: 10px 20px;
-            box-shadow: 1px 1px 1px 1px gray;
             border-radius: 10px
         }
         #btn {
@@ -68,11 +66,11 @@
             height: 50px;
             border: none;
             font-size: 20px;
-            background-color: black;
+            background: #183867;
             color: white;
             font-weight: bold;
             border-radius: 12px;
-            margin: 30px auto;
+            margin: 50px auto;
             display: block;
         }
         .main_form > .sub_btn_box > button:nth-of-type(1) {
@@ -102,11 +100,14 @@
         .login_ul {
             text-align: center;
             list-style:none;
-            margin: 20px auto;
+            margin: 40px auto;
             display: block;
             padding: 0px;
         }
-
+        .login_join, .login_pwch {
+            text-decoration-line: none;
+            color: #727272;
+        }
 
 
 
@@ -124,16 +125,14 @@
             <div class="grow_input">
                 <label class="login_label">비밀번호<br></label>
                 <input type="password" name="pw" id="pw" />
-                <input type="hidden" name="_RSAID" id="_RSAID" value="123">
-                <input type="hidden" name="_RSAPW" id="_RSAPW" value="456">
             </div>
             <button id="btn" class="btn" type="button">로그인</button>
         </form>
         <div class="login_list">
             <ul class="login_ul">
-                <li class="login_li"><a href="/join">회원가입</a></li>
+                <li class="login_li"><a class="login_join" href="/join">회원가입</a></li>
                 <li class="login_li" style="color:lightgray;">|</li>
-                <li class="login_li"><a href="/">비밀번호 찾기</a></li>
+                <li class="login_li"><a class="login_pwch" href="/">비밀번호 찾기</a></li>
             </ul>
         </div>
 
